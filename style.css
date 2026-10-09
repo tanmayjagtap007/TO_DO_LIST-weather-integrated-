@@ -1,0 +1,734 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef4ff;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width : 230px;
+  background-color : white;
+  padding : 35px 20px;
+  box-sizing : border-box;
+  border-right : 1px solid #e6ecf7;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom : 45px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #4a6cf7;
+  color: white;
+
+  display : grid;
+  place-items  : center;
+  font-size : 24px;
+}
+
+.logo h2 {
+  color : #1e293b;
+  margin : 0;
+  font-size : 22px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding : 12px 14px;
+  color : #475569;
+  border-radius : 10px;
+  cursor : pointer;
+}
+
+.menu-item i {
+  font-size : 20px;
+}
+
+.menu-item.active {
+  background-color : #eef3ff;
+  color : #4a6cf7;  
+}
+
+.main-content {
+  flex : 1;
+  padding : 30px;
+}
+
+.weather-card {
+  width: 100%;
+  min-height: 155px;
+
+  background: #ddf2ff;
+  border-radius: 18px;
+  padding: 25px 35px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-left{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.weather-icon{
+  font-size: 75px;
+  color : #ffbd25;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+
+.weather-info{
+  display:flex;
+  flex-direction:column;
+  gap: 5px;
+}
+
+.location{
+  display:flex;
+  align-items:center;
+  gap: 6px;
+  color : #172554;
+  font-size : 16px;
+  font-weight : 600;
+}
+
+.weather-condition{
+  margin: 0;
+  color : #64748b;
+  font-size : 16px;
+
+}
+
+.temperature{
+  margin: 0;
+  color :#172554;
+  font-size : 42px;
+  font-weight : 600;
+  
+}
+
+.weather-details{
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+  min-width: 280px;
+}
+
+.weather-detail{
+  display: grid;
+
+  grid-template-columns: 30px 1fr 70px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #172554;
+}
+
+.weather-detail i{
+  font-size: 20px;
+
+  color: #3b82f6;
+}
+
+.weather-detail strong {
+  font-size: 15px;
+
+  color: #172554;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box {
+  width : 100%;
+  background-color : white;
+  padding : 30px;
+  box-sizing : border-box;
+  border-radius : 15px;
+  box-shadow : 0 4px 15px rgba(74, 108, 247, 0.15);
+    
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.add {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.add input:focus {
+  outline: none;
+  border-color: #4a6cf7;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #4a6cf7;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3452d1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f8faff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+li span {
+  flex: 1;
+  color: #334155;
+}
+
+li.done span {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.delete {
+  background: #ef4444;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.delete:hover {
+  background: #dc2626;
+}
+
+.count {
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  margin: 20px 0 0;
+}
+
+.taskbar {
+  margin: 20px 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f3f7ff;
+}
+
+.taskbar-summary,
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taskbar-summary {
+  color: #334b82;
+}
+
+.tick {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #4a6cf7;
+  color: white;
+}
+
+.progress-row {
+  margin-top: 10px;
+}
+
+.progress-track {
+  flex: 1;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #dfe9ff;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius:2px;
+  background: #4a6cf7;
+}
+
+#percentage {
+  color: #4a6cf7;
+  font-size: 13px;
+}
+
+#box2{
+  box-sizing: border-box;
+  width: 100%;
+  height: 24vh;
+  min-height: 170px;
+  overflow-y: auto;  /* this property search from google */
+  padding: 12px;
+  border: 1px dashed #cbdcff;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.dashboard{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.calendar-box,
+.todo-box {
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-sizing: border-box;
+  min-height: 650px;
+  box-shadow: 0 4px 20px rgba(74, 108, 247, 0.08);
+}
+
+
+/* To-Do Header */
+
+.todo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-header h2 {
+  margin: 0;
+  color: #172554;
+  font-size: 26px;
+}
+
+
+/* Today Button */
+
+.today-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f6ff;
+  color: #64748b;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* Task Summary */
+
+.taskbar {
+  margin: 0 0 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f3f7ff;
+}
+
+.taskbar-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #334b82;
+}
+
+.tick {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #4a6cf7;
+  color: white;
+}
+
+.taskbar-summary span {
+  font-size: 15px;
+}
+
+
+/* Progress */
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.progress-track {
+  flex: 1;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #dfe9ff;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 8px;
+  background: #4a6cf7;
+  transition: width 0.3s ease;
+}
+
+#percentage {
+  color: #4a6cf7;
+  font-size: 13px;
+}
+
+
+/* Add Task */
+
+.add {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.add input:focus {
+  outline: none;
+  border-color: #4a6cf7;
+}
+
+.add button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #4a6cf7;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add button:hover {
+  background: #3452d1;
+}
+
+
+/* Remaining Tasks */
+
+.count {
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+
+/* Task List Area */
+
+#box2 {
+  width: 100%;
+  min-height: 250px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  background: white;
+}
+
+
+/* Individual Tasks */
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  background: #f8faff;
+
+  border: none;
+
+  border-radius: 12px;
+}
+
+#taskList li span {
+  flex: 1;
+  color: #334155;
+}
+
+#taskList li.done span {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+
+/* Checkbox */
+
+#taskList li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+/* Delete Button */
+
+#taskList .delete {
+  background: transparent;
+  color: #64748b;
+  padding: 5px 8px;
+  font-size: 13px;
+}
+
+#taskList .delete:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+}
+
+.calendar-header h2 {
+  margin: 0;
+  color:#172554;
+  font-size: 28px;
+}
+
+.month-navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+}
+
+.month-navigation h3{
+  margin:0;
+  color : #172554;
+  font-size: 18px;
+}
+
+.month-navigation button {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  background: transparent;
+  color: #4a6cf7;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.month-navigation button:hover {
+  background: #eef3ff;
+}
+
+.todo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-header h2 {
+  margin: 0;
+  color: #172554;
+  font-size: 26px;
+}
+
+.today-button {
+  background: #f1f5ff;
+  color: #64748b;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+
+.today-button:hover {
+  background: #e5ecff;
+}
+
+.task-summary {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  background: #f3f7ff;
+
+  border-radius: 12px;
+
+  color: #334b82;
+}
+
+.task-summary div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-summary i {
+  font-size: 20px;
+  color: #4a6cf7;
+}
+
+.task-summary strong {
+  color: #4a6cf7;
+}
+
+.add {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 15px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.calendar-days div {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #172554;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.calendar-days div:hover {
+  background: #eef3ff;
+  color: #4a6cf7;
+}
+
+.calendar-days .other-month {
+  color: #a0aec0;
+}
+
+.calendar-days .selected-date {
+  background: #4a6cf7;
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-days .today {
+  box-shadow: inset 0 0 0 2px #4a6cf7;
+}
+
+.calendar-days .selected-date:hover {
+  background-color:  #4a6cf7;
+  color : white;
+}
+
+.calendar-days .has-tasks {
+  position: relative;
+}
+
+.calendar-days .has-tasks::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4a6cf7;
+}
+
+.calendar-days .selected-date.has-tasks::after {
+  background: white;
+}

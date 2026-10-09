@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TO-DO-List</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet">
+    
+    <link rel="icon" href="data:,">
+
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="ri-check-fill"></i>
+                </div>
+
+                <h2>ToDoList</h2>
+
+            </div>
+            <nav class="menu">
+                <div class="menu-item active">
+
+                    <i class="ri-home-5-line"></i>
+
+                    <span>Today</span>
+
+                </div>
+                <div class="menu-item">
+
+                    <i class="ri-calendar-line"></i>
+
+                    <span>Calendar</span>
+                </div>
+                <div class="menu-item">
+
+                    <i class="ri-list-check-3"></i>
+
+                    <span>All Tasks</span>
+                </div>
+                <div class="menu-item">
+
+                    <i class="ri-settings-3-line"></i>
+
+                    <span>Settings</span>
+                </div>
+
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+
+            <section class = "weather-card">
+
+                <div class="weather-left">
+                    <div class="weather-icon">
+                        <i class="ri-sun-line" id="weatherIcon"></i>
+                    </div>
+
+                    <div class="weather-info">
+                        <div class="location">
+                            <i class="ri-map-pin-fill"></i>
+                            <span id="locationName"> Pune, Maharashtra</span>
+                        </div>
+                        
+                        <p class="weather-condition" id="weatherCondition">
+                            Partly Cloudy
+                        </p>
+
+                        <h1 class="temperature" id="temperature">
+                            28°C
+                        </h1>
+                    </div>
+
+                </div>
+                
+                <div class="weather-details">
+                    <div class="weather-detail">
+
+                        <i class="ri-drop-fill"></i>
+
+                        <span>Humidity</span>
+
+                        <strong id="humidity">65%</strong>
+                    </div>
+
+                    <div class="weather-detail">
+
+                        <i class="ri-windy-line"></i>
+
+                        <span>Wind Speed</span>
+
+                        <strong id="windSpeed">3.5 m/s</strong>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="dashboard">
+
+                <section class="calendar-box">
+
+                    <div class="calendar-header">
+                        <h2>Calendar</h2>
+
+                        <div class="month-navigation">
+
+                            <button id="prevMonth">
+                                <i class="ri-arrow-left-s-line"></i>
+                            </button>
+
+                            <h3 id="monthTitle">Octomber 2026</h3>
+
+                            <button id="nextMonth">
+                                <i class="ri-arrow-right-s-line"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="calander-content">
+
+
+                        <div class="calendar-weekdays">
+                            
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+
+                        <div class="calendar-days"  id="calendarDays">
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="todo-box">
+
+                    <div class="todo-header">
+
+                        <h2 id="dateHeading">Thu, 8 Oct 2026</h2>
+
+                        <button class="today-button">
+                            Today
+                        </button>
+
+                    </div>
+
+                    
+
+                    <div class="taskbar">
+
+                        <div class="taskbar-summary">
+
+                            <div class="tick">
+                                <i class="ri-check-fill"></i>
+                            </div>
+
+                            <span id="completedText">
+                                0 of 0 tasks completed
+                            </span>
+
+                        </div>
+
+                        <div class="progress-row">
+
+                            <div class="progress-track">
+
+                                <div class="progress-fill"></div>
+
+                            </div>
+
+                            <span id="percentage">
+                                0%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    <div class="add">
+
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="Add a new task..."
+                        >
+
+                        <button id="addButton">
+                            Add
+                        </button>
+
+                    </div>
+
+                    
+
+                    <p class="count">
+                        0 tasks remaining
+                    </p>
+
+                    <!-- Task List -->
+
+                    <div id="box2">
+
+                        <ul id="taskList"></ul>
+
+                    </div>
+                </section>
+            </div>
+        </main>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
