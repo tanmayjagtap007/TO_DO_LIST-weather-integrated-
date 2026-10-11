@@ -19,6 +19,31 @@
 </head>
 <body>
 
+    <div id="authScreen" class="auth-screen hidden">
+        <form id="authForm" class="auth-card">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="ri-check-fill"></i>
+                </div>
+                <h2>ToDoList</h2>
+            </div>
+
+            <h3 id="authTitle">Log in</h3>
+
+            <label for="authEmail">Email</label>
+            <input type="email" id="authEmail" autocomplete="email" required>
+
+            <label for="authPassword">Password</label>
+            <input type="password" id="authPassword" autocomplete="current-password" required>
+
+            <p id="authError" class="auth-error" role="alert"></p>
+
+            <button type="submit" id="authSubmit">Log in</button>
+            <button type="button" id="authToggle" class="link-button">New here? Create an account</button>
+            <button type="button" id="authClose" class="link-button">Cancel and continue as guest</button>
+        </form>
+    </div>
+
     <div class="app-container">
         <aside class="sidebar">
             <div class="logo">
@@ -57,6 +82,12 @@
                 </div>
 
             </nav>
+
+            <div class="user-box">
+                <span id="userEmail"></span>
+                <button type="button" id="loginButton">Log in</button>
+                <button type="button" id="logoutButton" class="hidden">Log out</button>
+            </div>
 
         </aside>
 

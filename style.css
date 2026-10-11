@@ -732,3 +732,117 @@ li.done span {
 .calendar-days .selected-date.has-tasks::after {
   background: white;
 }
+
+.hidden {
+  display: none !important;
+}
+
+/* Sidebar: pin the user box to the bottom */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-box {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #e6ecf7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-box span {
+  color: #475569;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.user-box button {
+  background: #f3f6ff;
+  color: #364fc7;
+}
+
+.user-box button:hover {
+  background: #e5ecff;
+}
+
+/* Login screen */
+.auth-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+  padding: 32px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(74, 108, 247, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-card .logo {
+  margin-bottom: 16px;
+}
+
+.auth-card h3 {
+  margin: 0 0 8px;
+  color: #172554;
+  font-size: 22px;
+}
+
+.auth-card label {
+  margin-top: 8px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.auth-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #4a6cf7;
+}
+
+.auth-card button[type="submit"] {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.auth-error {
+  min-height: 20px;
+  margin: 4px 0 0;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.link-button {
+  background: transparent;
+  color: #364fc7;
+}
+
+.link-button:hover {
+  background: #eef3ff;
+}
